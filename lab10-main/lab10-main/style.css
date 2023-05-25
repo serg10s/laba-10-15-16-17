@@ -1,0 +1,96 @@
+.wrapper{
+    display: grid;
+    height:fit-content;
+    grid-gap: 3px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 150px 170px 100px;
+    grid-template-areas: 
+"div1 div1 div1 div7"
+"div2 div3 div4 div7"
+"div5 div5 div4 div7"
+"div6 div6 div6 div6"
+}
+.div1{
+    background-color: blue;
+    grid-area: div1;
+}
+.div2{
+    background-color: aquamarine;
+    grid-area: div2;
+}
+.div3{
+    background-color:brown;
+    grid-area: div3;
+}
+.div4{
+    background-color: yellow;
+    grid-area: div4;
+}
+.div5{
+    background-color: green;
+    grid-area: div5;
+}
+.div6{
+    background-color: orange;
+    grid-area: div6;
+}
+.div7{
+    background-color: gray;
+    grid-area: div7; 
+}
+@media only screen and (max-width: 500px) and (min-width: 100px){
+    .wrapper{
+        grid-gap: 3px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows:200px 170px 100px 100px 100px 100px 100px;
+        grid-template-areas:
+        "div1"
+        "div2"
+        "div5"
+        "div6"
+        "div7"
+        "div4"
+        "div3"
+    }
+}
+@media only screen and (max-width: 750px) and (min-width: 500px){
+    .wrapper{
+        grid-gap:3px; 
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:200px 170px 100px 100px 100px 100px;
+        grid-template-areas: 
+        "div1 div1"
+        "div2 div3"
+        "div5 div5"
+        "div6 div6"
+        "div7 div7"
+        "div4 div4"
+    }
+}  
+@media only screen and (max-width: 950px) and (min-width: 750px){
+    .wrapper{
+        grid-gap:3px; 
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows:200px 150px 170px 100px 100px;
+        grid-template-areas:
+        "div1 div1 div1"
+        "div2 div3 div4"
+        "div5 div5 div4"
+        "div6 div6 div6"
+        "div7 div7 div7"
+    }
+}    
+@media only screen and (max-width: 1200px) and (min-width: 950px){
+    .wrapper{
+        grid-gap:3px;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 200px 150px 170px 100px;
+        grid-template-areas:
+        "div1 div1 div1 div7"
+        "div2 div3 div4 div7"
+        "div5 div5 div4 div7"
+        "div6 div6 div6 div6"
+        }
+    }
+
+    
